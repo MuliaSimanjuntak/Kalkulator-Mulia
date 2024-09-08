@@ -17,14 +17,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        displayOperation = findViewById(R.id.operasi)
-        displayResult = findViewById(R.id.hasil)
+        displayOperation = findViewById(R.id.calculate)
+        displayResult = findViewById(R.id.result)
 
         val buttonIds = listOf(
             R.id.btn_0, R.id.btn_1, R.id.btn_2, R.id.btn_3,
             R.id.btn_4, R.id.btn_5, R.id.btn_6, R.id.btn_7,
-            R.id.btn_8, R.id.btn_9, R.id.btn_tambah, R.id.btn_kurang,
-            R.id.btn_x, R.id.btn_miring, R.id.btn_persen, R.id.btn_titik
+            R.id.btn_8, R.id.btn_9, R.id.btn_plus, R.id.btn_minus,
+            R.id.btn_times, R.id.btn_divide, R.id.btn_percent, R.id.btn_comma
         )
 
         buttonIds.forEach { id ->
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btn_ac).setOnClickListener { clear() }
-        findViewById<Button>(R.id.btn_samadengan).setOnClickListener { calculateResult() }
+        findViewById<Button>(R.id.btn_result).setOnClickListener { calculateResult() }
     }
 
     private fun onButtonClick(button: Button) {
